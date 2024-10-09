@@ -39,6 +39,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           body: Container(
             padding: const EdgeInsets.all(16),
             child: SingleChildScrollView(
+              reverse: true,
               child: Form(
                 key: formKey,
                 child: Column(
@@ -177,7 +178,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           )
                         ],
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

@@ -32,7 +32,8 @@ class Cafem extends StatelessWidget {
       GoRoute(
         path: '/',
         name: Routes.signin.name,
-        builder: (context, state) => SignInScreen(),
+        builder: (context, state) =>
+            AuthController().isLogin ? HomeScreen() : SignInScreen(),
       ),
       GoRoute(
         path: '/signup',
@@ -56,6 +57,7 @@ class Cafem extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => AuthController()),
           ],
           child: MaterialApp.router(
+            debugShowCheckedModeBanner: false,
             routerConfig: router,
           )),
     );
